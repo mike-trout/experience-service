@@ -1,0 +1,36 @@
+---
+language: minimal
+
+branches:
+  only:
+  - master
+
+services:
+- docker
+
+env:
+  global:
+  - CLOUDSDK_CORE_DISABLE_PROMPTS=1 # Do not prompt for user input when using any SDK methods.
+  - DOCKER_HUB_USERNAME=miketrout
+  - secure: ezpKZDYQUeBGDrLbwqgtw9mbI5ieh6DwytkQUHEhhWV9hB2Fs2QdNuLvZDCoNkdz0xoFJWNYqwHUlzkh92hhMJ+xgLJGqDhVzcWrv3jcpANzvHaJuatjtkvStYbj6G5Fyc6ws2qyOQWW4gWHC7IplEyVPeFWv0DpEScfKK0+DW9rxbV1cIqrNlRyyj2NcXNXBWzn1GzOzZptmNxRTl4YMQLV6u/EYGwNxy1BlAPlFfTbycNDGIqevXgpxPQWUYxra2QUYfABHK+8MZl+zAEHekWgW306EzGUiB4Vz2cKSLM/2ORHjki1kKD+mtaUmwNneqA+mAjMvuVmWRR5CF+x5oDB1P3MjEMJ9SRVcWBkStjLkFLf7J7yt56GkRNj2wc36j5QvwDOASDZCdlSfhYXDfGQi2fc9TYPOFCF4lV3wz+3dSeJONuGTdVnp8M4kJ3drC/0WVHZ/zpe+zg+aO2t9WcTzY3Bb45BXy8sUQ5pqR6o0Ns1ueRbsOYM2E/9n9Qy2BbmjhosCC4pTzYSSXYO9bQRahLkbe91qy793y/rvtF8hdxGIfp4Ador7PY56mIUAMXIJ91fxdp/rSs9V+8N9Y2ockYQt0TuTkvJPRg0/tdG8t7G/139CyYlLZ269bRggrQbdRaMCPrFm6gBprYgyt36z6l64qxvi3xjEc7sNA8=
+
+addons:
+  apt:
+    packages:
+    - docker-ce
+
+before_install:
+- openssl aes-256-cbc -K $encrypted_ba76cac20159_key -iv $encrypted_ba76cac20159_iv -in gcloud-service-account-secret.json.enc -out gcloud-service-account-secret.json -d
+
+script:
+- docker --version
+- docker build -t miketrout/experience-service .
+- echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_USERNAME" --password-stdin
+- docker push miketrout/experience-service
+
+deploy:
+  provider: script
+  script: bash deploy.sh
+  skip_cleanup: true
+  on:
+    branch: master

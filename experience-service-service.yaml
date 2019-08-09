@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: experience-service-service
+spec:
+  type: NodePort
+  selector:
+    service: experience-service
+    tier: backend
+  ports:
+    - name: experience-service-port
+      protocol: TCP
+      port: 50001
+      targetPort: 80

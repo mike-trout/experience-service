@@ -1,0 +1,46 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: experience-service-deployment
+  labels:
+    service: experience-service
+    tier: backend
+spec:
+  replicas: 3
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      service: experience-service
+      tier: backend
+  template:
+    metadata:
+      labels:
+        service: experience-service
+        tier: backend
+    spec:
+      containers:
+        - name: experience-service
+          image: miketrout/experience-service
+          imagePullPolicy: Always
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 15
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 15
+          resources:
+            requests:
+              memory: 70Mi
+              cpu: 70m
+            limits:
+              memory: 100Mi
+              cpu: 100m
+          ports:
+            - containerPort: 80
