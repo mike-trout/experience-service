@@ -25,13 +25,13 @@ spec:
           imagePullPolicy: Always
           livenessProbe:
             httpGet:
-              path: /
+              path: /api/experience
               port: 50000
             initialDelaySeconds: 5
             periodSeconds: 15
           readinessProbe:
             httpGet:
-              path: /
+              path: /api/experience
               port: 50000
             initialDelaySeconds: 5
             periodSeconds: 15
