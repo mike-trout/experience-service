@@ -11,7 +11,7 @@ const experience = [
     { id: 2, jobRole: 'Founder, Open Source and Cloud Architect', dateRange: '2011 - 2017', employer: 'Ngineered', description: 'I did some cloud stuff. It was cloudy.' }
 ];
 
-app.get('/', (req, resp) => {
+app.get('/api/experience', (req, resp) => {
     console.log('Returning experience list.');
     resp.send(experience);
 });
