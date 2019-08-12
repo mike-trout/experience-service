@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Exit with an error if any part of the script fails
+set -e
+
 # Install gcloud
 curl https://sdk.cloud.google.com | bash > /dev/null
 
