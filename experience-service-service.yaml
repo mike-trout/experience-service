@@ -9,7 +9,7 @@ spec:
     service: experience-service
     tier: backend
   ports:
-    - name: experience-service-port
+    - name: http
       protocol: TCP
       port: 60000
       targetPort: 50000
