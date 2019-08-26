@@ -37,10 +37,10 @@ spec:
             periodSeconds: 15
           resources:
             requests:
-              memory: 70Mi
-              cpu: 70m
+              memory: 50Mi
+              cpu: 10m
             limits:
-              memory: 100Mi
-              cpu: 100m
+              memory: 70Mi
+              cpu: 50m
           ports:
             - containerPort: 50000
