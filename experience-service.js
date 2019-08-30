@@ -1,5 +1,5 @@
 const express = require('express');
-const path = require('path');
+// const path = require('path');
 const bodyParser = require('body-parser');
 
 const port = 50000;
@@ -17,4 +17,29 @@ app.get('/api/experience', (req, resp) => {
 });
 
 console.log(`Experience service listening on port ${port}`);
-app.listen(port);
+const server = app.listen(port);
+
+// The signals to handle
+// NOTE: The SIGKILL signal (9) cannot be intercepted and handled
+const signals = {
+    'SIGHUP': 1,
+    'SIGINT': 2,
+    'SIGTERM': 15
+};
+
+// Do any necessary shutdown logic for the application here
+const shutdown = (signal, value) => {
+    console.log("Shutdown!");
+    server.close(() => {
+        console.log(`Server stopped by ${signal} with value ${value}`);
+        process.exit(128 + value);
+    });
+};
+
+// Create a listener for each of the signals to handle
+Object.keys(signals).forEach((signal) => {
+    process.on(signal, () => {
+        console.log(`Process received a ${signal} signal`);
+        shutdown(signal, signals[signal]);
+    });
+});
