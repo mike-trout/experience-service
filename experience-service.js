@@ -1,6 +1,6 @@
 const express = require('express');
 
-const port = 50000;
+const port = process.env.HTTP_PORT || 50000;
 const app = express();
 
 const experience = [
@@ -9,6 +9,7 @@ const experience = [
 ];
 
 app.get('/api/experience', (req, resp) => {
+    resp.setHeader('Content-Type', 'application/json');
     resp.send(experience);
 });
 
