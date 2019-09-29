@@ -13,6 +13,11 @@ app.get('/api/experience', (req, resp) => {
     resp.send(experience);
 });
 
+// GET /healthz handler
+app.get('/healthz', (req, resp) => {
+    resp.sendStatus(200);
+});
+
 // Get HTTP_PORT from environment, default to 50000
 const port = process.env.HTTP_PORT || 50000;
 
