@@ -23,24 +23,28 @@ spec:
         - name: experience-service
           image: miketrout/experience-service
           imagePullPolicy: Always
+          resources:
+            requests:
+              memory: 15Mi
+              cpu: 10m
+            limits:
+              memory: 25Mi
+              cpu: 50m
           livenessProbe:
             httpGet:
-              path: /api/experience
-              port: 50000
+              path: /healthz
+              port: http
             initialDelaySeconds: 5
             periodSeconds: 15
           readinessProbe:
             httpGet:
-              path: /api/experience
-              port: 50000
+              path: /healthz
+              port: http
             initialDelaySeconds: 5
             periodSeconds: 15
-          resources:
-            requests:
-              memory: 50Mi
-              cpu: 10m
-            limits:
-              memory: 70Mi
-              cpu: 50m
+          env:
+            - name: HTTP_PORT
+              value: "50000"
           ports:
-            - containerPort: 50000
+            - name: http
+              containerPort: 50000
