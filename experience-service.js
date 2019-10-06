@@ -11,11 +11,12 @@ const experience = [
 app.get('/experience/', (req, resp) => {
     resp.setHeader('Content-Type', 'application/json');
     resp.setHeader('Allow', 'GET, HEAD, OPTIONS');
-    const requestUrl = req.protocol + '://' + req.get('host') + req.path;
+    const protocol = req.header('X-Forwarded-Proto') || req.protocol;
+    const requestUrl = protocol + '://' + req.get('host') + req.path;
     const json = {
         count: experience.length,
         items: experience.map((value) => {
-            return requestUrl + "/" + value.id;
+            return requestUrl + value.id;
         }),
         url: requestUrl
     };
@@ -29,7 +30,8 @@ app.get('/experience/:id([0-9]+)', (req, resp) => {
     resp.setHeader('Content-Type', 'application/json');
     resp.setHeader('Allow', 'GET, HEAD, OPTIONS');
     if (experienceItem) {
-        experienceItem.url = req.protocol + '://' + req.get('host') + req.path;
+        const protocol = req.header('X-Forwarded-Proto') || req.protocol;
+        experienceItem.url = protocol + '://' + req.get('host') + req.path;
         resp.send(experienceItem);
     } else {
         resp.status(404).send({ error: 'Experience item not found' });
