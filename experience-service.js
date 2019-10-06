@@ -7,8 +7,8 @@ const experience = [
     { id: 2, jobRole: 'Technician', dateRange: '2009 - 2011', employer: 'Electron Dynamics ltd.', description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor. Viverra maecenas accumsan lacus vel facilisis volutpat est velit. Amet consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Platea dictumst quisque sagittis purus sit amet volutpat. Maecenas volutpat blandit aliquam etiam erat velit scelerisque. Purus semper eget duis at tellus at urna condimentum mattis. Elementum nisi quis eleifend quam. Euismod lacinia at quis risus sed vulputate. Tincidunt nunc pulvinar sapien et ligula. Nunc id cursus metus aliquam. Tincidunt lobortis feugiat vivamus at augue eget. Auctor neque vitae tempus quam pellentesque. Mi tempus imperdiet nulla malesuada. Laoreet suspendisse interdum consectetur libero id faucibus nisl. Sed felis eget velit aliquet sagittis id.</p>' }
 ];
 
-// GET /api/experience handler
-app.get('/', (req, resp) => {
+// GET /experience/ handler
+app.get('/experience/', (req, resp) => {
     resp.setHeader('Content-Type', 'application/json');
     resp.setHeader('Allow', 'GET, HEAD, OPTIONS');
     const requestUrl = req.protocol + '://' + req.get('host') + req.path;
@@ -22,8 +22,8 @@ app.get('/', (req, resp) => {
     resp.send(json);
 });
 
-// GET /api/experience/{id} handler
-app.get('/:id([0-9]+)', (req, resp) => {
+// GET /experience/{id} handler
+app.get('/experience/:id([0-9]+)', (req, resp) => {
     const id = parseInt(req.params['id']);
     const experienceItem = experience.find((value) => value.id === id);
     resp.setHeader('Content-Type', 'application/json');
