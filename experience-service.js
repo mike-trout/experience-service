@@ -11,6 +11,7 @@ const experience = [
 app.get('/experience/', (req, resp) => {
     resp.setHeader('Content-Type', 'application/json');
     resp.setHeader('Allow', 'GET, HEAD, OPTIONS');
+    console.log(req.headers);
     const protocol = req.header('X-Forwarded-Proto') || req.protocol;
     const requestUrl = protocol + '://' + req.get('host') + req.path;
     const json = {
