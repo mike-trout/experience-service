@@ -11,8 +11,7 @@ const experience = [
 app.get('/experience/', (req, resp) => {
     resp.setHeader('Content-Type', 'application/json');
     resp.setHeader('Allow', 'GET, HEAD, OPTIONS');
-    console.log(req.headers);
-    const protocol = req.header('X-Forwarded-Proto') || req.protocol;
+    const protocol = req.header('x-forwarded-proto') || req.protocol;
     const requestUrl = protocol + '://' + req.get('host') + req.path;
     const json = {
         count: experience.length,
@@ -31,7 +30,7 @@ app.get('/experience/:id([0-9]+)', (req, resp) => {
     resp.setHeader('Content-Type', 'application/json');
     resp.setHeader('Allow', 'GET, HEAD, OPTIONS');
     if (experienceItem) {
-        const protocol = req.header('X-Forwarded-Proto') || req.protocol;
+        const protocol = req.header('x-forwarded-proto') || req.protocol;
         experienceItem.url = protocol + '://' + req.get('host') + req.path;
         resp.send(experienceItem);
     } else {
@@ -64,7 +63,7 @@ const shutdown = (signal, value) => {
     console.log("Shutdown!");
     server.close(() => {
         console.log(`Server stopped by ${signal} with value ${value}`);
-        process.exit(128 + value);
+        process.exit();
     });
 };
 
