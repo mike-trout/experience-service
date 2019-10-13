@@ -3,8 +3,55 @@ const app = express(); // App is an Express server
 
 // Hardcode experience resource for the time being
 const experience = [
-    { id: 1, jobRole: 'Analyst Programmer', dateRange: 'Jan 2011 - Present', employer: 'Cov&eacute;a Insurance, Reading', description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam adipiscing vitae proin sagittis nisl. Arcu felis bibendum ut tristique et egestas quis. Pharetra diam sit amet nisl suscipit adipiscing bibendum est ultricies. Eu volutpat odio facilisis mauris sit. Volutpat odio facilisis mauris sit. Arcu vitae elementum curabitur vitae nunc sed. Et egestas quis ipsum suspendisse ultrices gravida dictum. Sed turpis tincidunt id aliquet risus feugiat. Fermentum leo vel orci porta non. Blandit cursus risus at ultrices. Vitae purus faucibus ornare suspendisse sed nisi lacus. Scelerisque varius morbi enim nunc faucibus a. Neque aliquam vestibulum morbi blandit cursus risus at ultrices mi. Commodo sed egestas egestas fringilla. Feugiat sed lectus vestibulum mattis ullamcorper. Imperdiet proin fermentum leo vel orci.</p><p>Laoreet sit amet cursus sit amet. Et ultrices neque ornare aenean euismod elementum. Tristique senectus et netus et malesuada fames ac. Sagittis aliquam malesuada bibendum arcu vitae. Volutpat est velit egestas dui id ornare arcu odio. Enim facilisis gravida neque convallis a. Sit amet mauris commodo quis imperdiet massa. Tortor dignissim convallis aenean et tortor. Viverra ipsum nunc aliquet bibendum enim facilisis. Lacinia quis vel eros donec ac odio tempor. Libero id faucibus nisl tincidunt eget. Nec feugiat in fermentum posuere urna nec tincidunt praesent.</p>' },
-    { id: 2, jobRole: 'Technician', dateRange: '2008 - 2011', employer: 'Electron Dynamics, Southampton', description: '<p>My main duties included the surface mount and thru-hole assembly of PCB boards, stock control and purchasing, invoicing and shipping orders. I also became involved in the assembly and testing of complete temperature control units, electronic design and prototyping, programming microcontrollers in C and 3D modelling and rendering using AutoCAD.</p>' }
+    {
+        id: 1,
+        jobRole: 'Analyst Programmer',
+        dateRange: 'Jan 2011 - Present',
+        employer: 'Cov&eacute;a Insurance, Reading',
+        description: `<p>After training in Software AG Adabas Natural, I was instrumental in the
+migration of legacy Natural for Windows applications to the NaturalONE web application framework,
+being the first to train in the technology. Additionally, I coded a utility tool in Java that
+could automate the conversion of Natural for Windows source code to be compatible with the
+NaturalONE framework.</p>
+
+<p>To support the inhousing of our household claims function and migration to paperless, I
+designed and developed the vast majority of the NaturalONE Documents System. The system now
+supports the NaturalONE Claims System (household and commercial), the BCI commercial underwriting
+platform and has replaced the legacy Natural for Windows DMS. The features include an integrated
+email client, WYSIWYG document editor, image viewer with metadata support, SMS client and an
+external post and email indexing system. To date, the system has processed and made available over
+7.1 million items of post, letters, emails, attachments, SMS messages and other documents. It
+handles approximately 44,000 new itemsper week.</p>
+
+<p>I architected and implemented a search function for the BCI commercial underwriting platform
+that uses Apache Solr on the backend to make business data far more quickly and easily accessible
+compared with the limited, key-based record lookup functions available in other Natural
+systems.</p>
+
+<p>I created proof-of-concept CI/CD pipelines to automate the build, test and release of our legacy
+Natural applications in an attempt to remove pain points in the existing processes. I innovated a
+Natural unit test framework to enable the adoption of TDD in Natural software development. Using
+React Native, I developed a mobile app to allow customers to take and upload photos and videos to
+an AWS S3 bucket which are then visible in the NaturalONE Documents System.</p>
+
+<p>Following Cov&eactue;a’s drive to become cloud-native and adopt a microservices architecture, I
+am involved in the implementation of Kubernetes clusters in AWS using Terraform and Rancher and the
+creation of automation pipelines using Jenkins, Docker and Helm.</p>
+
+<p>Recently, I have organised and run a series of ‘learning lunches’ to help my colleagues. We have
+so far covered tools and technologies that include Git, Docker, Node.js, MongoDB, REST APIs, using
+curl to test APIs and running Docker containers on AWS EC2 instances.</p>`
+    },
+    {
+        id: 2,
+        jobRole: 'Technician',
+        dateRange: '2008 - 2011',
+        employer: 'Electron Dynamics, Southampton',
+        description: `<p>My main duties included the surface mount and thru-hole assembly of PCB
+boards, stock control and purchasing, invoicing and shipping orders. I also became involved in the
+assembly and testing of complete temperature control units, electronic design and prototyping,
+programming microcontrollers in C and 3D modelling and rendering using AutoCAD.</p>`
+    }
 ];
 
 // GET /experience/ handler
