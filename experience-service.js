@@ -21,7 +21,7 @@ platform and has replaced the legacy Natural for Windows DMS. The features inclu
 email client, WYSIWYG document editor, image viewer with metadata support, SMS client and an
 external post and email indexing system. To date, the system has processed and made available over
 7.1 million items of post, letters, emails, attachments, SMS messages and other documents. It
-handles approximately 44,000 new itemsper week.</p>
+handles approximately 44,000 new items per week.</p>
 
 <p>I architected and implemented a search function for the BCI commercial underwriting platform
 that uses Apache Solr on the backend to make business data far more quickly and easily accessible
