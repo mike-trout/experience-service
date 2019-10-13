@@ -34,7 +34,7 @@ Natural unit test framework to enable the adoption of TDD in Natural software de
 React Native, I developed a mobile app to allow customers to take and upload photos and videos to
 an AWS S3 bucket which are then visible in the NaturalONE Documents System.</p>
 
-<p>Following Cov&eactue;a’s drive to become cloud-native and adopt a microservices architecture, I
+<p>Following Cov&eacute;a’s drive to become cloud-native and adopt a microservices architecture, I
 am involved in the implementation of Kubernetes clusters in AWS using Terraform and Rancher and the
 creation of automation pipelines using Jenkins, Docker and Helm.</p>
 
