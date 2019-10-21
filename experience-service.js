@@ -20,7 +20,7 @@ supports the NaturalONE Claims System (household and commercial), the BCI commer
 platform and has replaced the legacy Natural for Windows DMS. The features include an integrated
 email client, WYSIWYG document editor, image viewer with metadata support, SMS client and an
 external post and email indexing system. To date, the system has processed and made available over
-7.1 million items of post, letters, emails, attachments, SMS messages and other documents. It
+7.2 million items of post, letters, emails, attachments, SMS messages and other documents. It
 handles approximately 44,000 new items per week.</p>
 
 <p>I architected and implemented a search function for the BCI commercial underwriting platform
