@@ -5,7 +5,7 @@ const app = express(); // App is an Express server
 const experience = [
     {
         id: 1,
-        jobRole: 'Analyst Programmer',
+        jobRole: 'Senior Software Engineer',
         dateRange: 'Jan 2011 - Present',
         employer: 'Cov&eacute;a Insurance, Reading',
         description: `<p>After training in Software AG Adabas Natural, I was instrumental in the
