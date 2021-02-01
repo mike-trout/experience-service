@@ -14,7 +14,7 @@ consists of a React SPA frontend and a Node.js microservice backend, both hosted
 headless CMS is used for content management. Under my guidance, the team invested heavily in unit
 testing with Jest and React Testing Library, as well as cross-device, cross-browser automated
 frontend testing using WebdriverIO and Saucelabs, allowing for fully-automated deployments from
-code to production.</p>.
+code to production.</p>
 
 <p>An equally important part of my role in the project was upskilling team members in newer
 technologies. I organised and ran a series of ‘learning lunches’ to help my colleagues. We covered
