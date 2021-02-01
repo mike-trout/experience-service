@@ -8,20 +8,34 @@ const experience = [
         jobRole: 'Senior Software Engineer',
         dateRange: 'Jan 2011 - Present',
         employer: 'Cov&eacute;a Insurance, Reading',
-        description: `<p>After training in Software AG Adabas Natural, I was instrumental in the
-migration of legacy Natural for Windows applications to the NaturalONE web application framework,
-being the first to train in the technology. Additionally, I coded a utility tool in Java that
-could automate the conversion of Natural for Windows source code to be compatible with the
-NaturalONE framework.</p>
+        description: `<p>My most recent project involved taking an active lead in the replacement
+of the Provident Insurance Help and Support area with a modern, mobile-first microsite. The site
+consists of a React SPA frontend and a Node.js microservice backend, both hosted on Kubernetes. A
+headless CMS is used for content management. Under my guidance, the team invested heavily in unit
+testing with Jest and React Testing Library, as well as cross-device, cross-browser automated
+frontend testing using WebdriverIO and Saucelabs, allowing for fully-automated deployments from
+code to production.</p>.
 
-<p>To support the inhousing of our household claims function and migration to paperless, I
+<p>An equally important part of my role in the project was upskilling team members in newer
+technologies. I organised and ran a series of ‘learning lunches’ to help my colleagues. We covered
+tools and technologies that include Git, Docker, Node.js, React, MongoDB, REST APIs, using curl to
+test APIs and running Docker containers on AWS EC2 instances.</p>
+
+<p>Previously, and following Cov&eacute;a’s drive to become cloud-native and adopt a microservices
+architecture, I was involved in the implementation of Kubernetes clusters in AWS using Terraform
+and Rancher and the creation of automation pipelines using Jenkins, Docker and Helm.</p>
+        
+<p>In my original role with Cov&eacute;a, after training in Software AG Adabas Natural, I was
+instrumental in the migration of legacy Natural for Windows applications to the NaturalONE web
+application framework. Additionally, I coded a utility tool in Java that could automate the
+conversion of Natural for Windows source code to be compatible with the NaturalONE framework.</p>
+
+<p>Supporting the inhousing of our household claims function and migration to paperless, I
 designed and developed the vast majority of the NaturalONE Documents System. The system now
 supports the NaturalONE Claims System (household and commercial), the BCI commercial underwriting
 platform and has replaced the legacy Natural for Windows DMS. The features include an integrated
 email client, WYSIWYG document editor, image viewer with metadata support, SMS client and an
-external post and email indexing system. To date, the system has processed and made available over
-7.5 million items of post, letters, emails, attachments, SMS messages and other documents. It
-handles approximately 44,000 new items per week.</p>
+incoming post and email indexing system. It handles approximately 50,000 new items per week.</p>
 
 <p>I architected and implemented a search function for the BCI commercial underwriting platform
 that uses Apache Solr on the backend to make business data far more quickly and easily accessible
@@ -32,15 +46,7 @@ systems.</p>
 Natural applications in an attempt to remove pain points in the existing processes. I innovated a
 Natural unit test framework to enable the adoption of TDD in Natural software development. Using
 React Native, I developed a mobile app to allow customers to take and upload photos and videos to
-an AWS S3 bucket which are then visible in the NaturalONE Documents System.</p>
-
-<p>Following Cov&eacute;a’s drive to become cloud-native and adopt a microservices architecture, I
-am involved in the implementation of Kubernetes clusters in AWS using Terraform and Rancher and the
-creation of automation pipelines using Jenkins, Docker and Helm.</p>
-
-<p>Recently, I have organised and run a series of ‘learning lunches’ to help my colleagues. We have
-so far covered tools and technologies that include Git, Docker, Node.js, MongoDB, REST APIs, using
-curl to test APIs and running Docker containers on AWS EC2 instances.</p>`
+an AWS S3 bucket which are then visible in the NaturalONE Documents System.</p>`
     },
     {
         id: 2,
