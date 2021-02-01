@@ -23,7 +23,7 @@ test APIs and running Docker containers on AWS EC2 instances.</p>
 
 <p>Previously, and following Cov&eacute;a’s drive to become cloud-native and adopt a microservices
 architecture, I was involved in the implementation of Kubernetes clusters in AWS using Terraform
-and Rancher and the creation of automation pipelines using Jenkins, Docker and Helm.</p>
+and Rancher, and the creation of automation pipelines using Jenkins, Docker and Helm.</p>
         
 <p>In my original role with Cov&eacute;a, after training in Software AG Adabas Natural, I was
 instrumental in the migration of legacy Natural for Windows applications to the NaturalONE web
