@@ -30,7 +30,7 @@ instrumental in the migration of legacy Natural for Windows applications to the 
 application framework. Additionally, I coded a utility tool in Java that could automate the
 conversion of Natural for Windows source code to be compatible with the NaturalONE framework.</p>
 
-<p>Supporting the inhousing of our household claims function and migration to paperless, I
+<p>Supporting the in-housing of our household claims function and migration to paperless, I
 designed and developed the vast majority of the NaturalONE Documents System. The system now
 supports the NaturalONE Claims System (household and commercial), the BCI commercial underwriting
 platform and has replaced the legacy Natural for Windows DMS. The features include an integrated
