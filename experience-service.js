@@ -56,7 +56,7 @@ an AWS S3 bucket which are then visible in the NaturalONE Documents System.</p>`
         description: `<p>My main duties included the surface mount and thru-hole assembly of PCB
 boards, stock control and purchasing, invoicing and shipping orders. I also became involved in the
 assembly and testing of complete temperature control units, electronic design and prototyping,
-programming microcontrollers in C and 3D modelling and rendering using AutoCAD.</p>`
+programming microcontrollers in C, and 3D modelling and rendering using AutoCAD.</p>`
     }
 ];
 
