@@ -8,15 +8,19 @@ const experience = [
         jobRole: 'Senior Software Engineer',
         dateRange: 'Jan 2011 - Present',
         employer: 'Cov&eacute;a Insurance, Reading',
-        description: `<p>My most recent project involved taking an active lead in the replacement
-of the Provident Insurance Help and Support area with a modern, mobile-first microsite. The site
-consists of a React SPA frontend and a Node.js microservice backend, both hosted on Kubernetes. A
-headless CMS is used for content management. Under my guidance, the team invested heavily in unit
-testing with Jest and React Testing Library, as well as cross-device, cross-browser automated
-frontend testing using WebdriverIO and Saucelabs, allowing for fully-automated deployments from
-code to production.</p>
+        description: `<p>I am currently working on developing containerised microservices in
+Node.js using the LoopBack 4 framework that will be part of Cov&eacute;a's next-generation
+insurance platform. The microservices are deployed to Kubernetes and use Istio as the service
+mesh.</p>
 
-<p>An equally important part of my role in the project was upskilling team members in newer
+<p>My previous project involved taking an active lead in the replacement of the Provident Insurance
+Help and Support area with a modern, mobile-first microsite. The site consists of a React SPA
+frontend and a Node.js microservice backend, both hosted on Kubernetes. A headless CMS is used for
+content management. Under my guidance, the team invested heavily in unit testing with Jest and
+React Testing Library, as well as cross-device, cross-browser automated frontend testing using
+WebdriverIO and Saucelabs, allowing for fully-automated deployments from code to production.</p>
+
+<p>An equally important part of my role in that project was upskilling team members in newer
 technologies. I organised and ran a series of ‘learning lunches’ to help my colleagues. We covered
 tools and technologies that include Git, Docker, Node.js, React, MongoDB, REST APIs, using curl to
 test APIs and running Docker containers on AWS EC2 instances.</p>
@@ -24,7 +28,7 @@ test APIs and running Docker containers on AWS EC2 instances.</p>
 <p>Previously, and following Cov&eacute;a’s drive to become cloud-native and adopt a microservices
 architecture, I was involved in the implementation of Kubernetes clusters in AWS using Terraform
 and Rancher, and the creation of automation pipelines using Jenkins, Docker and Helm.</p>
-        
+
 <p>In my original role with Cov&eacute;a, after training in Software AG Adabas Natural, I was
 instrumental in the migration of legacy Natural for Windows applications to the NaturalONE web
 application framework. Additionally, I coded a utility tool in Java that could automate the
