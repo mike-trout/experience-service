@@ -9,9 +9,8 @@ const experience = [
         dateRange: 'Jan 2011 - Present',
         employer: 'Cov&eacute;a Insurance, Reading',
         description: `<p>I am currently working on developing containerised microservices in
-Node.js using the LoopBack 4 framework that will be part of Cov&eacute;a's next-generation
-insurance platform. The microservices are deployed to Kubernetes and use Istio as the service
-mesh.</p>
+Node.js and the LoopBack 4 framework that are part of Covéa's next-generation insurance platform.
+The microservices are deployed to Kubernetes and use the Istio service mesh.</p>
 
 <p>My previous project involved taking an active lead in the replacement of the
 <a href="https://www.providentinsurance.co.uk/help/" rel="noopener noreferrer" target="_blank">
