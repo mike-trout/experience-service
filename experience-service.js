@@ -12,14 +12,14 @@ const experience = [
 Node.js and the LoopBack 4 framework that are part of Covéa's next-generation insurance platform.
 The microservices are deployed to Kubernetes and use the Istio service mesh.</p>
 
-<p>My previous project involved taking an active lead in the replacement of the
+<p>My previous project involved leading the replacement of the
 <a href="https://www.providentinsurance.co.uk/help/" rel="noopener noreferrer" target="_blank">
 Provident Insurance Help and Support area</a> with a modern, mobile-first microsite. The site
 consists of a React SPA frontend and a Node.js microservice backend, both hosted on Kubernetes.
-A headless CMS is used for content management. Under my guidance, the team invested heavily in unit
-testing with Jest and React Testing Library, as well as cross-device, cross-browser automated
-frontend testing using WebdriverIO and Saucelabs, allowing for fully-automated deployments from
-code to production.</p>
+A headless CMS is used for content management. Under my guidance, the team invested heavily in TDD
+with Jest and React Testing Library, as well as cross-device, cross-browser automated
+frontend testing using BDD, WebdriverIO and Saucelabs, allowing for fully-automated deployments
+from code to production.</p>
 
 <p>An equally important part of my role in that project was upskilling team members in newer
 technologies. I organised and ran a series of ‘learning lunches’ to help my colleagues. We covered
