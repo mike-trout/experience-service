@@ -25,8 +25,8 @@ before_install:
 
 script:
 - docker --version
-- docker build --tag miketrout/experience-service .
 - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_USERNAME" --password-stdin
+- docker build --tag miketrout/experience-service .
 - docker push miketrout/experience-service
 
 deploy:
